@@ -42,3 +42,6 @@ def save_response_to_file(response_data: str, filename: str):
         
     except Exception as e:
         print(f"Error saving response to file: {str(e)}")
+        
+def update_result_json(resultant_json, llm_iterative_response_json):
+    pass

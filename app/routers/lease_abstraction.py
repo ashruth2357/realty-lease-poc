@@ -11,7 +11,8 @@ from fastapi import (
 from dotenv import load_dotenv
 from fastapi.responses import JSONResponse
 from utils.logs import logger
-from utils.helpers import get_llm_adapter
+from utils.helpers import get_llm_adapter, update_result_json
+from utils.parsers.pdf import PDFChunker
 from utils.prompts import LEASE_ANALYSIS
 from utils.prompts import AMENDMENT_ANALYSIS
 load_dotenv()
@@ -28,70 +29,41 @@ async def get_lease_abstraction(
             return JSONResponse(
                 content={"error": {"asset": "is invalid"}}, status_code=HTTPStatus.BAD_REQUEST.value
             )
-        # Assign fileid from the uploaded file's name and prepare target directory
-        original_filename = assets.filename or "uploaded_file"
-        safe_fileid = "".join([c if c.isalnum() or c in ["-", "_", "."] else "_" for c in original_filename])
-        fileid = safe_fileid
-        target_dir = os.path.join(".", fileid)
-
-        # If directory already exists, return specified message along with existing original_lease.json
-        if os.path.isdir(target_dir):
-            existing_path = os.path.join(target_dir, "original_lease.json")
-            existing_payload = None
-            if os.path.isfile(existing_path):
-                try:
-                    with open(existing_path, "r", encoding="utf-8") as f:
-                        existing_text = f.read()
-                    try:
-                        existing_payload = json.loads(existing_text)
-                    except Exception:
-                        existing_payload = existing_text
-                except Exception:
-                    existing_payload = None
-            return JSONResponse(content={
-                "message": "original lease abstraction already provided",
-                "fileid": fileid,
-                "original_lease": existing_payload
-            }, status_code=HTTPStatus.OK.value)
-
-        data = await assets.read()
-        base64_string = base64.b64encode(data).decode("utf-8")
-        with open("./utils/references/lease_abstraction.json") as file:
-            original_lease_data_template = json.load(file)
+        
+        chunker = PDFChunker(overlap_percentage=0.2)
+        
+        # Process the PDF from bytes
+        chunks = chunker.process_pdf(await assets.read(), extract_tables=True)
+        
+        # Convert chunks to JSON-serializable format
+        chunks_data = []
+        lease = {}
+        for chunk in chunks:
+            chunks_data.append({
+                "chunk_id": chunk.chunk_id,
+                "page_number": chunk.page_number,
+                "text": chunk.original_page_text,
+                "previous_overlap": chunk.previous_overlap,
+                "next_overlap": chunk.next_overlap,
+                "overlap_info": chunk.overlap_info
+            })
             
-        payload = [
-            {"role": "system", "content": LEASE_ANALYSIS['system'].format(JSON_STRUCTURE = json.dumps(original_lease_data_template), DOCUMENT_NAME = original_filename)},
-            {
-                "role": "user", "content": 
-                [
-                    {
-                        "type": "input_file", 
-                        "filename": original_filename,
-                        "file_data": f"data:application/pdf;base64,{base64_string}"
-                    },
-                    {
-                        "type": "input_text", 
-                        "text": LEASE_ANALYSIS['user']
-                    }
-                ]
-            }
-        ]
-        print(payload[0]['content'])
-        response = llm_adapter.get_non_streaming_response(payload)
+            print(chunk)
+            
+            payload = [
+                {
+                    "role": "system", "content": "" # will be filled by Ashruth 
+                },
+                {
+                    "role": "user", "content": ""
+                }
+            ]
+            
+            iterative_response = llm_adapter.get_non_streaming_response(payload)
+            lease = update_result_json(lease, iterative_response)
+            
+        return lease 
 
-        # Create directory named as fileid and write results to original_lease.json
-        os.makedirs(target_dir, exist_ok=False)
-        result_text = response.output_text
-        output_path = os.path.join(target_dir, "original_lease.json")
-        try:
-            parsed_json = json.loads(result_text)
-            with open(output_path, "w", encoding="utf-8") as out_file:
-                json.dump(parsed_json, out_file, ensure_ascii=False, indent=2)
-        except Exception:
-            with open(output_path, "w", encoding="utf-8") as out_file:
-                out_file.write(result_text)
-
-        return result_text
 
         
     except Exception as error:
@@ -216,14 +188,14 @@ async def amendment_analysis(
         print(payload[0]['content'])
         print('i got here')
         print('streaming start')
-        response = llm_adapter.get_streaming_response(payload)
-        full_text_response = ""
-        for event in response:
-            if event.type == "response.output_text.delta":
-                full_text_response+= event.delta
-                print(event.delta, end="", flush=True)
-            elif event.type == "response.completed":
-                print()  # finish with a newline        # Store the response as the next version: original_lease_<x>.json
+        response = llm_adapter.get_non_streaming_response(payload)
+        full_text_response = response.output_text
+        # for event in response:
+        #     if event.type == "response.output_text.delta":
+        #         full_text_response+= event.delta
+        #         print(event.delta, end="", flush=True)
+        #     elif event.type == "response.completed":
+        #         print()  # finish with a newline        # Store the response as the next version: original_lease_<x>.json
         try:
             next_version = (max(v for v, _ in versions) + 1) if versions else 0
             new_output_path = os.path.join(candidate_dir, f"original_lease_{next_version}.json")
@@ -239,20 +211,23 @@ async def amendment_analysis(
                 # Try to recover by extracting content between first { and last }
                 first_open = result_text.find('{')
                 last_close = result_text.rfind('}')
-
-                if first_open != -1 and last_close != -1 and first_open < last_close:
-                    json_substring = result_text[first_open:last_close + 1]
-                    try:
-                        parsed_json = json.loads(json_substring)
-                        with open(new_output_path, "w", encoding="utf-8") as out_file:
-                            json.dump(parsed_json, out_file, ensure_ascii=False, indent=2)
-                        return parsed_json
-                    except json.JSONDecodeError:
-                        print("Failed to parse even after trimming to JSON substring.")
-                else:
-                    print("Could not find valid JSON boundaries.")
-                with open(new_output_path, "w", encoding="utf-8") as out_file:
-                    out_file.write(result_text)
+                json_substring = result_text[first_open:last_close]
+                parsed_json = json.loads(json_substring)
+                # if first_open != -1 and last_close != -1 and first_open < last_close:
+                #     json_substring = result_text[first_open:last_close + 1]
+                #     print('json substring here --->>> ')
+                #     print(json_substring)
+                #     try:
+                #         parsed_json = json.loads(json_substring)
+                #         with open(new_output_path, "w", encoding="utf-8") as out_file:
+                #             json.dump(parsed_json, out_file, ensure_ascii=False, indent=2)
+                #         return parsed_json
+                #     except json.JSONDecodeError:
+                #         print("Failed to parse even after trimming to JSON substring.")
+                # else:
+                #     print("Could not find valid JSON boundaries.")
+                # with open(new_output_path, "w", encoding="utf-8") as out_file:
+                #     out_file.write(result_text)
         except Exception as write_error:
             logger.error(write_error)
 

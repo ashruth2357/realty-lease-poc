@@ -1,0 +1,483 @@
+{
+  "fact_sheet": {
+    "key_facts": {
+      "tenant_name": {
+        "value": "Bayer HealthCare LLC",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ],
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+          ]
+        ]
+      },
+      "landlord_name": {
+        "value": "PH Office 2, LLC",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ],
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+          ]
+        ]
+      },
+      "original_lease_date": {
+        "value": "October 5, 2015",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "premises_address": {
+        "value": "5100 W. JB Hunt Drive, Suite 620, Rogers, Benton County, Arkansas 72758",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "original_premises_rentable_sf": {
+        "value": "17,090 RSF",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "expansion_space_usable_sf": {
+        "value": "1,019 USF",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "expansion_space_rentable_sf": {
+        "value": "1,190 RSF",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "premises_usable_sf_post_expansion": {
+        "value": "15,679 USF",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "premises_rentable_sf_post_expansion": {
+        "value": "18,284 RSF (subject to verification by measurement upon completion of Expansion Space)",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "expansion_commencement_date_definition": {
+        "value": "Earlier of (i) Tenant’s occupancy of the Expansion Space for business purposes, or (ii) fourteen (14) days from the date Landlord delivers possession of the Expansion Space with Landlord’s Work complete; in all events, no later than November 1, 2017.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ]
+        ]
+      },
+      "building_total_rentable_sf": {
+        "value": "226,468 RSF",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      "tenant_proportionate_share_post_expansion": {
+        "value": "8% (18,284 RSF Premises / 226,468 RSF Building)",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      "parking_spaces_total_post_expansion": {
+        "value": "82 total spaces",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+          ]
+        ]
+      }
+    },
+    "rent_schedule": [
+      {
+        "period_description": {
+          "value": "1/7/16-6/6/16: Rate $0.00 (per RSF), Monthly Base Rent $0.00, 14,642 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "6/7/16-6/30/16: Rate $24.50 (per RSF), Monthly Base Rent $23,915.28, 14,642 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/16-6/30/17: Rate $24.50 (per RSF), Monthly Base Rent $29,894.08, 14,642 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/17-6/30/18: Rate $24.99 (per RSF), Monthly Base Rent $38,076.43, 18,284 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/18-6/30/19: Rate $25.49 (per RSF), Monthly Base Rent $38,838.26, 18,284 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/19-6/30/20: Rate $26.00 (per RSF), Monthly Base Rent $39,615.33, 18,284 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/20-6/30/21: Rate $26.52 (per RSF), Monthly Base Rent $40,407.64, 18,284 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "7/1/21-6/30/22: Rate $27.05 (per RSF), Monthly Base Rent $41,215.18, 18,284 RSF",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      },
+      {
+        "period_description": {
+          "value": "Note: Table is a guide since the Expansion Commencement Date (ECD) is unknown. If ECD occurs other than the first day of a month, Monthly Base Rent is prorated. RSF must be verified under Section 1; monthly base rent may be adjusted after measurement.",
+          "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+          "amendments": [
+            [
+              "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+            ]
+          ]
+        }
+      }
+    ],
+    "key_clauses": {
+      "alterations": {
+        "value": "Landlord shall construct the Expansion Space per mutually approved plans and finishes represented on Exhibit A (Landlord’s Work). Landlord provides an Improvement Allowance up to $55.00 per RSF of the Expansion Space, totaling $65,450.00, to be used for design, engineering, architectural services, and construction of Landlord’s Work; no portion of the Allowance may be applied to Tenant’s furniture, trade fixtures, equipment, or data cabling. Tenant-requested change orders and any costs exceeding the Allowance are at Tenant’s sole expense; Landlord-requested change orders are at Landlord’s expense. All proposed change orders require mutual approval by Landlord and Tenant.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ],
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4"
+          ]
+        ]
+      }
+    }
+  },
+  "money_map": [
+    {
+      "clause_name": "Base Rent Schedule (Post-Amendment)",
+      "explanation": "Base Rent remains per original lease until the Expansion Commencement Date (ECD). Beginning on ECD, Base Rent is set per the table, with RSF updated to 18,284 RSF and monthly rates as listed. If ECD does not occur on the first day of a month, that month’s rent is prorated. Monthly Base Rent may be adjusted after final RSF verification.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+        ],
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "clause_name": "Expansion Commencement Date (ECD) and Rent Start",
+      "explanation": "ECD is the earlier of Tenant’s business occupancy of the Expansion Space or 14 days after Landlord delivers possession with Landlord’s Work complete, and in any case no later than November 1, 2017. Base Rent at the expanded RSF starts on ECD (subject to proration if mid-month).",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+        ],
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "clause_name": "Tenant Improvement (TI) Allowance",
+      "explanation": "Landlord provides an Improvement Allowance of $55.00 per RSF of the Expansion Space, totaling $65,450.00, for design, engineering, architectural services, and construction of Landlord’s Work only; not available for Tenant’s furniture, trade fixtures, equipment, or data cabling.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "clause_name": "Operating Expenses / Proportionate Share",
+      "explanation": "Effective on ECD, Tenant’s Proportionate Share is adjusted to 8%, calculated as 18,284 RSF (Premises) divided by 226,468 RSF (Building).",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "clause_name": "RSF Update and Measurement",
+      "explanation": "Post-expansion Premises: 15,679 USF and 18,284 RSF. Final RSF to be verified by measurement upon completion; monthly rent may be adjusted accordingly.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+        ],
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "clause_name": "Parking (Post-Expansion)",
+      "explanation": "Tenant is entitled to additional parking spaces as a result of the expansion for a total of 82 spaces.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+        ]
+      ]
+    }
+  ],
+  "obligations_list": {
+    "tenant_obligations": [
+      {
+        "description": "Pay adjusted Base Rent for the expanded Premises beginning on the Expansion Commencement Date; if ECD occurs mid-month, pay prorated rent; monthly base rent may later be adjusted based on RSF verification.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      {
+        "description": "Provide subtenant’s financial information to Landlord and obtain Landlord’s prior written approval or consent for any sublease; Landlord’s consent shall not be unreasonably withheld or delayed.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      {
+        "description": "Bear the cost of Tenant-requested change orders and any costs of Landlord’s Work that exceed the Improvement Allowance.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      }
+    ],
+    "landlord_obligations": [
+      {
+        "description": "Construct the Expansion Space per mutually approved plans and finishes (Landlord’s Work) and deliver possession with Landlord’s Work complete; Exhibit A depicts the plans/finishes.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+          ],
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ],
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4"
+          ]
+        ]
+      },
+      {
+        "description": "Provide an Improvement Allowance up to $55.00 per RSF of the Expansion Space, totaling $65,450.00, for design, engineering, architectural services, and construction of Landlord’s Work; not for furniture, trade fixtures, equipment, or data cabling.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      {
+        "description": "Pay all costs of any Landlord-requested change orders; all change orders require mutual approval by Landlord and Tenant.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+          ]
+        ]
+      },
+      {
+        "description": "Provide additional parking spaces resulting in a total allocation of 82 spaces for Tenant.",
+        "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+        "amendments": [
+          [
+            "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+          ]
+        ]
+      }
+    ]
+  },
+  "audit_and_exceptions": [
+    {
+      "flag_type": "Expansion Space Verification",
+      "description": "Premises RSF post-expansion (18,284 RSF) must be verified by measurement upon completion of the Expansion Space; monthly base rent may be adjusted accordingly.",
+      "suggested_next_step": "Obtain final measurement certificate upon completion; update RSF and rent ledger if any variance is found.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1; Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+        ],
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Expansion Commencement Date Tracking",
+      "description": "ECD is the earlier of Tenant business occupancy or 14 days after delivery with Landlord’s Work complete, and no later than November 1, 2017.",
+      "suggested_next_step": "Collect delivery notice, substantial completion confirmation, and move-in evidence to establish ECD; set rent start and proration accordingly.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 1"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Rent Proration and Adjustment",
+      "description": "If ECD occurs mid-month, Monthly Base Rent must be prorated. RSF verification may further adjust monthly rent.",
+      "suggested_next_step": "Align billing proration with actual ECD; re-calculate monthly rent upon receipt of final RSF measurement.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Operating Expense Share Update",
+      "description": "Tenant’s Proportionate Share adjusts to 8% effective on ECD, based on 18,284 RSF Premises / 226,468 RSF Building.",
+      "suggested_next_step": "Update OpEx and real estate tax pass-throughs to 8% effective ECD; confirm building RSF baseline remains 226,468 RSF.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Assignment and Subletting Update",
+      "description": "Net worth requirement of at least $100,000,000.00 is deleted. Subletting requires Landlord’s prior written approval or consent, not unreasonably withheld or delayed, and Tenant must provide subtenant’s financial information. The sentence allowing assumption by a subtenant with equal or greater creditworthiness is deleted.",
+      "suggested_next_step": "Update lease abstract to remove net worth threshold; require financials and obtain written Landlord consent for any subleases.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Parking Allocation",
+      "description": "Tenant is entitled to additional parking spaces for a new total of 82 spaces.",
+      "suggested_next_step": "Update parking records and access devices to reflect 82-space allocation.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 3"
+        ]
+      ]
+    },
+    {
+      "flag_type": "TI Allowance Controls",
+      "description": "TI Allowance of $65,450.00 is limited to design/engineering/architectural services and construction of Landlord’s Work; not for furniture, trade fixtures, equipment, or data cabling. Tenant pays for Tenant-requested change orders and any costs exceeding the Allowance.",
+      "suggested_next_step": "Establish a TI budget and cost tracking; pre-clear eligible costs; route any change orders for mutual approval; bill Tenant for any overages or Tenant-requested changes.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 2"
+        ]
+      ]
+    },
+    {
+      "flag_type": "Exhibit A Documentation",
+      "description": "Exhibit A shows the mutually approved plans/finishes for the Expansion Space.",
+      "suggested_next_step": "Archive Exhibit A with the lease file and use it as the basis for Landlord’s Work scope verification.",
+      "citation": "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4",
+      "amendments": [
+        [
+          "Bayer 2017-09-14 Lease 1st Amendment.pdf Page 4"
+        ]
+      ]
+    }
+  ]
+}

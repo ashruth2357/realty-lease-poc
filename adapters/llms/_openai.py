@@ -1,7 +1,11 @@
 from typing import List
 from adapters.llms.base import LargeLanguageModel 
 from openai import OpenAI
+from utils.schemas import LeaseDocument
+import json 
 
+with open("/Users/vivek.singh/realty-poc/utils/references/lease_abstraction.json", 'r') as file:
+    reference = json.load(file)
 
 
 class _OpenAI(LargeLanguageModel):
@@ -15,7 +19,7 @@ class _OpenAI(LargeLanguageModel):
             model="gpt-4o",
             input=payload,
             stream=True,
-            temperature = 0
+            temperature = 0,
         ) 
     
     def get_non_streaming_response(self, payload: List[dict]):
