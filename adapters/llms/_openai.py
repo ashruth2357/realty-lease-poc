@@ -3,8 +3,11 @@ from adapters.llms.base import LargeLanguageModel
 from openai import OpenAI
 from utils.schemas import LeaseDocument
 import json 
+from pathlib import Path
 
-with open("/Users/vivek.singh/realty-poc/utils/references/lease_abstraction.json", 'r') as file:
+# Load reference schema using a project-relative path
+reference_path = Path(__file__).resolve().parents[2] / "utils" / "references" / "lease_abstraction.json"
+with open(reference_path, 'r', encoding='utf-8') as file:
     reference = json.load(file)
 
 

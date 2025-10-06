@@ -1,60 +1,787 @@
 {
-    "fact_sheet": {
-        "key_facts": {
-            "tenant_name": {
-                "value": "string",
-                "citation": "string",
-                "amendments": [["string"]]
+    "executiveSummary": {
+        "value": "[Executive summary of the lease including key terms, parties, space, rent, term, options, and other critical provisions - created during original lease processing only]"
+    },
+    "leaseInformation": {
+        "lease": {
+            "value": "[Full legal name of tenant]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "property": {
+            "value": "[Address of the main property]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "leaseFrom": {
+            "value": "[Lease commencement date in YYYY-MM-DD format]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "leaseTo": {
+            "value": "[Lease expiration date in YYYY-MM-DD format]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        }
+    },
+    "space": {
+        "unit": {
+            "value": "[Suite number]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "building": {
+            "value": "[Building identifier]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "floor": {
+            "value": "[Floor number]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "areaRentable": {
+            "value": "[Rentable square feet]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "areaUsable": {
+            "value": "[Usable square feet]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "status": {
+            "value": "[In/Out/Other status]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        },
+        "notes": {
+            "value": "[Any notes about measurement standard, proportionate share, etc.]",
+            "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+            "amendments": [
+                {
+                    "previousValue": "[Previous value]",
+                    "amendedValue": "[New value]",
+                    "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                }
+            ]
+        }
+    },
+    "chargeSchedules": {
+        "baseRent": [
+            {
+                "chargeCode": {
+                    "value": "[Charge code identifier]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "description": {
+                    "value": "[Description of charge]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "dateFrom": {
+                    "value": "[Start date in YYYY-MM-DD format]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "dateTo": {
+                    "value": "[End date in YYYY-MM-DD format]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "monthlyAmount": {
+                    "value": "[Monthly dollar amount]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "annualAmount": {
+                    "value": "[Annual dollar amount]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "areaRentable": {
+                    "value": "[Rentable area for calculation]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "amountPerArea": {
+                    "value": "[Amount per square foot per month]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "managementFees": {
+                    "value": "[Management fee amount]",
+                    "citation": "{FILENAME}, Page {PAGE_NUMBER}"
+                },
+                "amendments": [
+                    {
+                        "previousValue": {
+                            "chargeCode": "[Previous value]",
+                            "description": "[Previous value]",
+                            "dateFrom": "[Previous value]",
+                            "dateTo": "[Previous value]",
+                            "monthlyAmount": "[Previous value]",
+                            "annualAmount": "[Previous value]",
+                            "areaRentable": "[Previous value]",
+                            "amountPerArea": "[Previous value]",
+                            "managementFees": "[Previous value]"
+                        },
+                        "amendedValue": {
+                            "chargeCode": "[New value]",
+                            "description": "[New value]",
+                            "dateFrom": "[New value]",
+                            "dateTo": "[New value]",
+                            "monthlyAmount": "[New value]",
+                            "annualAmount": "[New value]",
+                            "areaRentable": "[New value]",
+                            "amountPerArea": "[New value]",
+                            "managementFees": "[New value]"
+                        },
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        ],
+        "lateFee": {
+            "calculationType": {
+                "value": "[Type of late fee calculation]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "graceDays": {
+                "value": "[Number of grace days]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "percent": {
+                "value": "[Late fee percentage]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "secondFeeCalculationType": {
+                "value": "[Second fee calculation type if applicable]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "secondFeeGrace": {
+                "value": "[Second fee grace period]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "secondFeePercent": {
+                "value": "[Second fee percentage]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "perDayFee": {
+                "value": "[Per day fee amount]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        }
+    },
+    "otherLeaseProvisions": {
+        "premisesAndTerm": {
+            "synopsis": {
+                "value": "[One-line synopsis of premises and term]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "keyParameters": {
+                "value": "[Key parameters including measurement standard, elections, rent commencement, proportionate share]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "narrative": {
+                "value": "[Full narrative description]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
             }
         },
-        "rent_schedule": [
-            {
-                "period_description": {
-                    "value": "string",
-                    "citation": "string",
-                    "amendments": [["string"]]
-                }
+        "taxes": {
+            "synopsis": {
+                "value": "[One-line synopsis of tax provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "definition": {
+                "value": "[Definition of Taxes]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "keyParameters": {
+                "value": "[Key parameters including base year, pass-through basis, inspection window]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "narrative": {
+                "value": "[Full narrative description]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
             }
-        ],
-        "key_clauses": {
-            "alterations": {
-                "value": "string",
-                "citation": "string",
-                "amendments": [["string"]]
+        },
+        "operatingExpenses": {
+            "synopsis": {
+                "value": "[One-line synopsis of operating expense provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "definition": {
+                "value": "[Definition of Operating Expenses]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "keyParameters": {
+                "value": "[Key parameters including base year, gross-up, controllable cap, audit rights]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "billingTimeline": {
+                "value": "[Billing and true-up timeline]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "formulas": {
+                "value": "[Formulas for calculations]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "capitalRules": {
+                "value": "[Capital improvement rules]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "narrative": {
+                "value": "[Full narrative description]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "repairsAndMaintenance": {
+            "synopsis": {
+                "value": "[One-line synopsis of repairs and maintenance]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "narrative": {
+                "value": "[Full narrative description]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "alterations": {
+            "synopsis": {
+                "value": "[One-line synopsis of alteration provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "signs": {
+            "synopsis": {
+                "value": "[One-line synopsis of signage rights]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "services": {
+            "synopsis": {
+                "value": "[One-line synopsis of services provided]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "insurance": {
+            "synopsis": {
+                "value": "[One-line synopsis of insurance requirements]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            },
+            "keyParameters": {
+                "value": "[Key parameters including coverage amounts, additional insured requirements]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "casualty": {
+            "synopsis": {
+                "value": "[One-line synopsis of casualty provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "liabilityAndIndemnification": {
+            "synopsis": {
+                "value": "[One-line synopsis of liability and indemnification]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "use": {
+            "synopsis": {
+                "value": "[One-line synopsis of permitted use]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "landlordsRightOfEntry": {
+            "synopsis": {
+                "value": "[One-line synopsis of entry rights]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "assignmentAndSubletting": {
+            "synopsis": {
+                "value": "[One-line synopsis of assignment and subletting rights]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "parking": {
+            "synopsis": {
+                "value": "[One-line synopsis of parking provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "condemnation": {
+            "synopsis": {
+                "value": "[One-line synopsis of condemnation provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "holdover": {
+            "synopsis": {
+                "value": "[One-line synopsis of holdover provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "quietEnjoyment": {
+            "synopsis": {
+                "value": "[One-line synopsis of quiet enjoyment]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "defaultAndRemedies": {
+            "synopsis": {
+                "value": "[One-line synopsis of default and remedies]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "subordination": {
+            "synopsis": {
+                "value": "[One-line synopsis of subordination provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "liens": {
+            "synopsis": {
+                "value": "[One-line synopsis of lien provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "hazardousMaterials": {
+            "synopsis": {
+                "value": "[One-line synopsis of hazardous materials provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "rulesAndRegulations": {
+            "synopsis": {
+                "value": "[One-line synopsis of rules and regulations]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "brokerage": {
+            "synopsis": {
+                "value": "[One-line synopsis of brokerage provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "estoppel": {
+            "synopsis": {
+                "value": "[One-line synopsis of estoppel provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "notices": {
+            "synopsis": {
+                "value": "[One-line synopsis of notice provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "rightOfFirstRefusalOffer": {
+            "synopsis": {
+                "value": "[One-line synopsis of ROFR/ROFO provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "expansionAndRelocation": {
+            "synopsis": {
+                "value": "[One-line synopsis of expansion and relocation provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
+            }
+        },
+        "landlordDefault": {
+            "synopsis": {
+                "value": "[One-line synopsis of landlord default provisions]",
+                "citation": "{FILENAME}, Page {PAGE_NUMBER}",
+                "amendments": [
+                    {
+                        "previousValue": "[Previous value]",
+                        "amendedValue": "[New value]",
+                        "previousCitation": "{FILENAME}, Page {PAGE_NUMBER}"
+                    }
+                ]
             }
         }
-    },
-    "money_map": [
-        {
-            "clause_name": "string",
-            "explanation": "string",
-            "citation": "string",
-            "amendments": [["string"]]
-        }
-    ],
-    "obligations_list": {
-        "tenant_obligations": [
-            {
-                "description": "string",
-                "citation": "string",
-                "amendments": [["string"]]
-            }
-        ],
-        "landlord_obligations": [
-            {
-                "description": "string",
-                "citation": "string",
-                "amendments": [["string"]]
-            }
-        ]
-    },
-    "audit_and_exceptions": [
-        {
-            "flag_type": "string",
-            "description": "string",
-            "suggested_next_step": "string",
-            "citation": "string",
-            "amendments": [["string"]]
-        }
-    ]
+    }
 }

@@ -92,27 +92,54 @@ curl -s -F "assets=@/path/to/lease.pdf" http://127.0.0.1:8000/lease-summary/leas
 ### Notes
 - Dockerfile: Ensure your container starts the app binding to `0.0.0.0` and uses `$PORT` provided by Render.
 - Plan: `free` is suitable for testing; consider higher plans for production.
-- Response format: endpoints return `response.output_text` (string). If clients expect a JSON object, parse/validate before returning.
+- Response format: endpoints now return a JSON object with two keys: `final` (merged result) and `sections` (per-section outputs). See Endpoints and behavior for details.
 
 ### Endpoints and behavior
 
 - `POST /lease-abstract`
   - Form field: `assets` (PDF)
-  - Stores a directory named after the uploaded filename (sanitized as `fileid`).
-  - Saves model output as `original_lease.json` in that directory.
-  - If the directory already exists, returns a JSON response with the message "original lease abstraction already provided" and includes the existing `original_lease` content.
-  - The prompt uses `DOCUMENT_NAME` as the uploaded filename and injects the expected JSON structure.
+  - The PDF is chunked for processing; five scoped prompts are run in parallel to generate specific sections only:
+    - executiveSummary, leaseInformation, space, chargeSchedules, otherLeaseProvisions
+  - The service merges these section-wise results into a single `final` JSON and also returns each section under `sections`.
+  - Persists outputs under a directory named after the uploaded filename (without extension):
+    - original_executiveSummary.json
+    - original_leaseInformation.json
+    - original_space.json
+    - original_chargeSchedules.json
+    - original_otherLeaseProvisions.json
+    - original_lease.json (merged final)
+  - Response shape:
+    - `{ "final": <merged-json>, "sections": { "executiveSummary": {...}, ... } }`
 
 - `POST /lease-abstract/amendment-analysis`
   - Form field: `amendment` (PDF)
-  - Tries to match the amendment to an existing `fileid` directory by leading name (e.g., "Bayer*").
-  - If no match, returns 404 with "Please provide original lease first. Original abstraction unavailable."
-  - On match, loads the latest original JSON (`original_lease.json` or highest `original_lease_<x>.json`), sends it with the amendment to the model, and saves the new output as `original_lease_<next>.json`.
-  - Returns the model output text.
+  - Tries to match the amendment to an existing `fileid` directory by leading name (e.g., "Bayer*"). If no match, returns 404.
+  - Loads the latest `original_lease*.json` as the previous abstraction (ground truth).
+  - Runs five amendment-scoped prompts in parallel to update only their respective sections (tracking amendments per rules):
+    - executiveSummary, leaseInformation, space, chargeSchedules, otherLeaseProvisions
+  - Merges the results by section and persists outputs in the matched directory:
+    - amendment_executiveSummary_<n>.json
+    - amendment_leaseInformation_<n>.json
+    - amendment_space_<n>.json
+    - amendment_chargeSchedules_<n>.json
+    - amendment_otherLeaseProvisions_<n>.json
+    - original_lease_<n>.json (contains `{ "final": ..., "sections": ... }`)
+  - Response shape:
+    - `{ "final": <merged-json>, "sections": { "executiveSummary": {...}, ... } }`
 
 ### Prompt variables
 
 - `DOCUMENT_NAME`: set to the uploaded PDF’s filename (both endpoints) to prefix page-number references in the output.
 - `JSON_STRUCTURE`: the base schema injected into prompts (from `utils/references/lease_abstraction.json`).
+
+### Scoped prompts
+
+The system defines base prompts and scoped variants:
+
+- Base: `LEASE_ANALYSIS`, `AMENDMENT_ANALYSIS`
+- Scoped (original): `GENERATE_EXECUTIVE_SUMMARY`, `GENERATE_LEASE_INFORMATION`, `GENERATE_SPACE`, `GENERATE_CHARGE_SCHEDULES`, `GENERATE_OTHER_LEASE_PROVISIONS`
+- Scoped (amendment): `GENERATE_AMENDMENT_EXECUTIVE_SUMMARY`, `GENERATE_AMENDMENT_LEASE_INFORMATION`, `GENERATE_AMENDMENT_SPACE`, `GENERATE_AMENDMENT_CHARGE_SCHEDULES`, `GENERATE_AMENDMENT_OTHER_LEASE_PROVISIONS`
+
+Each scoped prompt keeps all rules from the base prompt but restricts generation to its target section. The service runs these in parallel and merges outputs by top-level section keys.
 
 

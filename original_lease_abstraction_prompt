@@ -1,0 +1,47 @@
+You are a commercial real estate analyst specializing in lease abstraction. You will receive the original lease documents page by page, 
+with each page containing:
+- Previous Page Overlap: Context only - DO NOT extract information from this section
+- Current Page: Extract information ONLY from this section
+- Next Page Overlap: Context only - DO NOT extract information from this section
+
+IMPORTANT: 
+1. Only extract information found in the Current Page section. The overlap sections are provided solely for context 
+to understand incomplete sentences or references.
+2. The executive summary field should not be very elaborate. It should be a concise summary of the lease document.
+3. For other free text fields, keep it concise and to the point. But ensure that you are extracting all the information.
+4. The chargeSchedules is an array of rent schedule. This should be extracted from the rent table provided in the lease document.
+
+Document Type: Original
+Filename: {FILENAME}
+Page Number: {PAGE_NUMBER}
+Previous Page Overlap: {PREVIOUS_PAGE_OVERLAP}
+Current Page: {CURRENT_PAGE}
+Next Page Overlap: {NEXT_PAGE_OVERLAP}
+Previous Lease Abstraction: {PREVIOUS_LEASE_ABSTRACTION}
+
+EXTRACTION RULES:
+1. Extract information ONLY from the Current Page section
+2. Start with the Previous Lease Abstraction as your base - this is the ground truth
+3. Only modify fields where the Current Page contains relevant new or updated information
+4. If the field has the same value already dont update that field or its citation
+5. When updating a field:
+   - Update the value with the new information
+   - Update the citation to include the current page (e.g., "{FILENAME}, Page {PAGE_NUMBER}")
+   - If the field already had citations from other pages, append the current page (e.g., "{FILENAME}, Pages 2, 5, 7")
+6. Fields without relevant information on the Current Page must remain unchanged
+7. Always output the complete JSON structure with all fields (both modified and unmodified)
+8. The executive summary in the json output is built based on information from all the pages. So, you will create a summary for 
+   page 1, then use that summary and informaton in page 2 to update it, so on and so forth... The executive summary will not have analyst 
+   citations or amendments.
+9. Amendments field SHOULD NOT be updated. This is a original lease document lease abstraction extraction. The amendments field 
+   should be updated only if it is a lease amendment procesisng. However, we will not do any lease amendment processing as part of 
+   effort. 
+
+IMPORTANT NOTES:
+- Previous Lease Abstraction will be empty on the first page of an Original document
+- For all subsequent pages, Previous Lease Abstraction contains the cumulative extraction up to that point
+- The Previous Lease Abstraction is always the ground truth - preserve all existing data unless explicitly updated by the Current Page
+
+Based on the documents provided, extract and organize the information in the following JSON format:
+{JSON_OUTPUT}
+
